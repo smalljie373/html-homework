@@ -1,0 +1,307 @@
+@import './reset.css';
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+/*排版*/
+.socialMedia .social{
+    display: flex;
+    justify-content: flex-end;
+}
+.gotoTOP{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:20;
+    bottom:20px;
+    right:20px;
+}
+.socialMedia .social li{
+    padding:7px 13px 6px 0;
+    position: relative;
+}
+.socialMedia ul li:first-child::after{
+    content:'|';
+    position: absolute;
+    color:gray;
+    right: 5px;
+}
+.social li a img{
+    padding:0 2px 0 2px;
+}
+.container .header,
+.container .footer{
+    display: flex;
+    justify-content:space-between;
+}
+.container .header .nav{
+    display: flex;
+}
+.header .nav li a{
+    padding:18px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.nav li a::before{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom:0;
+}
+.container .banner{
+    display: flex;
+    align-items: center;
+}
+.container .course{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.course .courseItem .courseImg{
+    display: block;
+}
+.compare table tr{
+    position: relative;
+}
+.compare table tr th,
+.compare table tr td{
+    position: relative;
+    z-index: 1;
+}
+.compare table tr::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: rgba(6, 241, 241, 0.3);
+    transition: all .3s ease;
+}
+.connection .contact{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contact .contactinfo{
+    display: flex;
+    flex-direction: column;
+}
+.contactinfo button{
+    align-self: flex-end;
+}
+.footer ul li a{
+    position: relative;
+}
+.footer ul li a::before{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom:-2px;
+    left:0;
+}
+/*區塊*/
+.socialMedia{
+    background: #f6f6f6;
+}
+.gotoTOP{
+    background:#5dd4b7;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.container .header .headerLogo{
+    background: url('../images/logo.png') no-repeat;
+    display: block;
+    height: 50px;
+    width: 200px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.nav li a::before{
+    width: 0%;
+    border-bottom:3px solid #00cc99;
+    transition: all .3s ease;
+}
+.container .banner{
+    background: url('../images/banner.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 347px;
+    margin:0 0 55px 0;
+}
+.banner h2{
+    background: rgba(98, 198, 198, 0.3);
+    padding:30px;
+    width: 100%;
+}
+.container .course{
+    margin:0 0 62px 0;
+}
+.course .courseItem{
+    width: 302px;
+    padding:15px;
+    margin:10px 0 0 0;
+    box-shadow: 1px 1px 3px #000;
+}
+.course .courseItem .courseImg,
+.compare table{
+    margin:0 auto;
+}
+.course .courseItem .courseImg{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.compare table{
+    width: 80%;
+}
+.course .courseItem h3{
+    margin:10px 0 5px 0;
+}
+.course .courseItem ul {
+    margin:2px 0 0 0;
+}
+.course .courseItem ul li{
+    padding:2px;
+    margin:0 0 0 21px;
+}
+.container .compare h2{
+    margin:0 0 20px 0;
+}
+.container .compare{
+    margin:0 0 63px 0;
+}
+.compare table tr{
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+.compare table tr th,
+.compare table tr td,
+.container .footer{
+    padding:10px 20px;
+}
+.container .connection{
+    padding:37px;
+}
+.contact{
+    margin:30px 0 0 0;
+}
+.contact .contactMessage{
+    border:0px solid;
+    resize: none;
+    border-radius: 5px;
+    margin:0 0 10px 0;
+    width: 460px;
+    height: 252px;
+}
+.contact .contactinfo input{
+    width: 460px;
+    height: 32px;
+    border:none;
+    border-radius: 5px;
+}
+.contact .contactinfo label,
+.contact .contactinfo input,
+.footer ul li{
+    margin:5px  0;
+}
+.contactinfo button{
+    width: 70px;
+    padding:10px;
+    margin:10px 0 0 0;
+    border:none;
+    border-radius: 5px;
+}
+.footer ul li a::before{
+    border-bottom:3px solid red;
+    width: 0%;
+    transition: all .3s ease;
+}
+.contact .contactinfo input,
+.contact textarea{
+    box-shadow: 1px 1px 2px #000;
+}
+/*內容*/
+.social li a,
+.nav li a,
+.footer ul li a,
+.gotoTOP{
+    text-decoration: none;
+}
+.gotoTOP i{
+    font-size: 32px;
+}
+.social li .facebook{
+    color:#657aac;
+}
+.social li .twitter{
+    color:#3fb7ee;
+}
+.header .nav li a,
+.text-primary{
+    color:#00cc99;
+}
+.text-white,
+.contact .contactinfo label{
+    color:white;
+}
+.banner h2{
+    font-size: 36px;
+    color:white;
+    line-height: 1.3em;
+}
+.course .courseItem h3,
+.container .compare h2,
+.container .connection h2{ 
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.course .courseItem p{
+    line-height: 1.1em;
+    letter-spacing: 3px;
+}
+.course .courseItem ul li{
+    list-style: disc;
+}
+.compare table tr th{
+    text-align: left;
+    font-weight: bold;
+    background:#f7f7f7;
+}
+.container .connection{
+    background: linear-gradient(#00664D, #009671);
+}
+.contactinfo button{
+    color:white;
+    background:#00cc98 ;
+    cursor: pointer;
+}
+.footer ul li a{
+    color:red;
+}
+/*動畫*/
+.social li a:hover{
+    font-weight: bold;
+}
+.gotoTOP i:hover{
+    color:rgb(3, 185, 85);
+}
+.contactinfo button:hover{
+    color:white;
+    background:#00664d ;
+}
+.nav li a:hover::before,
+.compare table tr:hover:after,
+.footer ul li a:hover::before{
+    width: 100%;
+}
